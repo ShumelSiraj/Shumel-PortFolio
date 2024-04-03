@@ -3440,14 +3440,3 @@ a, a:hover, a:active, a:visited {
 a {
     text-decoration: none !important;
 }
-@media only screen and (max-width: 600px) {
-    /* Styles for screens smaller than 600px */
-}
-
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    /* Styles for screens between 601px and 1024px */
-}
-img, video, canvas {
-    max-width: 100%;
-    height: auto;
-}
