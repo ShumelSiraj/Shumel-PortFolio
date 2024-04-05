@@ -122,20 +122,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     learnMoreBtn.addEventListener('click', function (event) {
         event.preventDefault(); // Prevent default anchor behavior
-        learnMoreSection.style.display = learnMoreSection.style.display === 'block' ? 'none' : 'block';
+        const isHidden = learnMoreSection.style.display === 'none' || learnMoreSection.style.display === '';
+        learnMoreSection.style.display = isHidden ? 'block' : 'none';
     });
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const fullPortfolioToggle = document.getElementById('fullPortfolioToggle');
-    const fullPortfolioContent = document.getElementById('fullPortfolioContent');
-
-    fullPortfolioToggle.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default action if it's a link
-        fullPortfolioContent.style.display = fullPortfolioContent.style.display === 'block' ? 'none' : 'block';
-    });
-});
-
 
 
 // Smooth scrolling for navigation links
