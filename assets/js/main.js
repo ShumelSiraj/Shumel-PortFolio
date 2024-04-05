@@ -157,6 +157,16 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     var toggle = document.getElementById('fullPortfolioToggle');
     var content = document.getElementById('fullPortfolioContent');
+	const toggles = document.querySelectorAll('.dropdown-toggle');
+	toggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const content = this.nextElementSibling; // Assuming the content to toggle is immediately after the toggle button
+            if (content) {
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+    });
+
 
     toggle.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default action if it's a link
@@ -376,6 +386,4 @@ document.addEventListener('click', function() {
         dropdown.style.display = 'none'; // Hide the dropdown content
     });
 });
-
-
 

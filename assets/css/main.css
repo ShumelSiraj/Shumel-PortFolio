@@ -2618,9 +2618,10 @@ input, select, textarea {
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
 		background-image: url("images/matrixxx.gif"), url("../../images/bg.jpg");
-		background-position: center,							top left;
-		background-repeat: no-repeat,								no-repeat;
-		background-size: cover;
+		background-position: center top,top left;
+		background-repeat: no-repeat,no-repeat,								no-repeat;
+		background-size: cover,150%;
+		transition: background-size 0.5s ease;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
@@ -3439,4 +3440,10 @@ a, a:hover, a:active, a:visited {
 }
 a {
     text-decoration: none !important;
+}
+@media only screen and (max-width: 768px) {
+    #header {
+        background-size: auto, 100%; /* Adjust background size for smaller screens */
+        padding: 4em 1em; /* Adjust padding for smaller screens */
+    }
 }
