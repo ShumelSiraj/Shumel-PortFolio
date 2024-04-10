@@ -3444,7 +3444,7 @@ other necessary styles for visibility */
 
 @media (min-width: 768px) {
     .popup-content {
-        max-width: 50%; /* Use a smaller max-width for larger screens */
+        max-width: 100%; /* Use a smaller max-width for larger screens */
     }
 }
 
