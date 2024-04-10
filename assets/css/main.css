@@ -3380,34 +3380,37 @@ html {
 }
 
 .popup-overlay {
-    display: none; /* Hide the popup by default */
+    display: none; /* Hidden by default */
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 1000; /* Ensure the overlay is on top of other content */
+    z-index: 1000; /* High z-index to ensure overlay is on top */
 }
 
 .popup-content {
-    display: block; /* Show the popup content when active */
-    position: absolute;
+    display: block; /* Ensures the content is visible when popup is active */
+    position: fixed; /* Keeps the popup in place during scrolling */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: auto; /* Adjust width to content size */
-    max-width: 90%; /* Limit the maximum width to ensure padding from screen edges */
-    max-height: 90vh; /* Limit the maximum height to ensure padding from screen edges */
-    overflow-y: auto; /* Allow scrolling for overflow content */
-    padding: 20px;
+    width: 600px; /* Fixed width for larger screens */
+    min-width: 300px; /* Minimum width to prevent the popup from becoming too thin */
+    height: auto; /* Height adjusted to content */
+    max-height: 90vh; /* Limits the height to prevent overflow, allows for some margin from viewport edges */
+    overflow-y: auto; /* Allows scrolling within the popup if content exceeds the height */
     background-color: white;
-    z-index: 1001; /* Ensure the content is on top of the overlay */
+    padding: 20px;
+    box-sizing: border-box; /* Includes padding in the width and height calculations */
+    z-index: 1001; /* Ensures content is above the overlay */
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .popup-content {
-        max-width: 50%; /* Use a smaller max-width for larger screens */
+        width: 80%; /* Adjusts width for smaller screens to maintain responsiveness */
+        padding: 10px; /* Adjusts padding for smaller screens */
     }
 }
 
