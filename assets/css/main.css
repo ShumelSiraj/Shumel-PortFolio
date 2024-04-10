@@ -83,7 +83,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #fff;
+		background: #f8f8f8;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -98,7 +98,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #a2a2a2;
+		color: #000000;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -135,7 +135,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #787878;
+		color: #5a5d9d;
 		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -154,6 +154,11 @@ input, select, textarea {
 	h2 {
 		font-size: 1.5em;
 		line-height: 1.5em;
+	}
+
+	p {
+		font-size: 1.0em; /* Example size, adjust as needed */
+		color: #07070c;
 	}
 
 	h3 {
@@ -1771,13 +1776,14 @@ input, select, textarea {
 	}
 
 	header h2 + p {
+		color: #5a5d9d;
 		font-size: 1.25em;
 		margin-top: -1em;
 		line-height: 1.5em;
 	}
 
 	header h3 + p {
-		font-size: 1.1em;
+		font-size: 1.0em;
 		margin-top: 0.8em;
 		line-height: 1.5em;
 	}
@@ -2249,7 +2255,7 @@ input, select, textarea {
 			}
 
 			ul.labeled-icons li h3 {
-				color: #b2b2b2;
+				color: #5a5d9d;
 				left: 0;
 				position: absolute;
 				text-align: center;
@@ -2463,8 +2469,8 @@ input, select, textarea {
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		background-color: transparent;
 		border-radius: 0.35em;
-		border: solid 3px #efefef;
-		color: #787878 !important;
+		border: solid 3px #747272;
+		color: #131212 !important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 400;
@@ -3259,7 +3265,7 @@ input, select, textarea {
 		/* Navigation Bar Styling */
 		#nav {
 			margin-left: 0px;
-			background-color: #000000; /* Dark background for the nav bar */
+			background-color: #020438; /* Dark background for the nav bar */
 			color: #ffffff; /* White text color */
 			padding: 0.5em; /* Padding around the nav items */
 			text-align: center; /* Center the nav items horizontally */
@@ -3300,11 +3306,24 @@ input, select, textarea {
 }
 .experience-header h3 {
     cursor: pointer;
-    color: rgba(0, 0, 0, 0.438); /* Example color to indicate clickability */
+    color: #5a5d9d; /* Example color to indicate clickability */
 	margin-bottom: 10px;
+	font-size: 1.30em;
+	
 }
 
 .experience-header h3:hover {
+    text-decoration: none; /* Indicate clickability on hover */
+}
+
+.education-header h3 {
+    cursor: pointer;
+    color: #5a5d9d; /* Example color to indicate clickability */
+	margin-bottom: 10px;
+	font-size: 1.30em ;
+}
+
+.education-header h3:hover {
     text-decoration: none; /* Indicate clickability on hover */
 }
 
@@ -3452,6 +3471,7 @@ a {
 .work-item-card {
     background-color: #ffffff; /* White background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+	border: 2px solid transparent; /* Transparent border for a smooth transition */
     border-radius: 10px; /* Rounded corners */
     padding: 10px; /* Spacing inside the card */
     margin-bottom: 30px; /* Spacing between cards */
@@ -3460,6 +3480,7 @@ a {
 
 /* Hover Effect for Cards */
 .work-item-card:hover {
+	border-color: #49bf9d; /* Change to green background */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
