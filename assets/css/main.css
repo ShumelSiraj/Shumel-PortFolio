@@ -2577,29 +2577,36 @@ input, select, textarea {
 
 /* Work Item */
 
-	.work-item {
-		margin: 0 0 2em 0;
-	}
+.work-item {
+    margin: 0 0 2em 0;
+    transition: transform 0.1s ease; /* Smooth transition for transform effect */
+    display: inline-block; /* Necessary for transform to work effectively */
+}
 
-		.work-item .image {
-			margin: 0 0 1.5em 0;
-		}
+.work-item:hover {
+    transform: scale(1.01); /* Zoom in slightly on hover */
+}
 
-		.work-item h3 {
-			font-size: 1em;
-			margin: 0 0 0.5em 0;
-		}
+    .work-item .image {
+        margin: 0 0 1.5em 0;
+    }
 
-		.work-item p {
-			font-size: 0.8em;
-			line-height: 1.5em;
-			margin: 0;
-		}
-		.work-item img {
-			width: 200px; /* Adjust the width as needed */
-			height: 150px; /* Adjust the height as needed */
-			object-fit: cover; /* This will ensure that images cover the area without stretching */
-		}
+    .work-item h3 {
+        font-size: 1em;
+        margin: 0 0 0.5em 0;
+    }
+
+    .work-item p {
+        font-size: 0.8em;
+        line-height: 1.5em;
+        margin: 0;
+    }
+
+    .work-item img {
+        width: 200px; /* Adjust the width as needed */
+        height: 150px; /* Adjust the height as needed */
+        object-fit: cover; /* This will ensure that images cover the area without stretching */
+    }
 		
 
 /* Header */
@@ -2680,39 +2687,56 @@ input, select, textarea {
 
 /* Footer */
 
-	#footer .icons {
-		margin: 1em 0 0 0;
-	}
+#footer .icons {
+    margin: 1em 0 0 0;
+    display: inline-block; /* Ensure the container allows for transformation */
+}
 
-		#footer .icons a {
-			color: rgba(255, 255, 255, 0.4);
-		}
+    #footer .icons a {
+        color: rgba(255, 255, 255, 0.4);
+        transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        display: inline-block; /* Apply transform to inline-block elements */
+    }
 
-	#footer .copyright {
-		color: rgba(255, 255, 255, 0.4);
-		font-size: 0.8em;
-		list-style: none;
-		margin: 1em 0 0 0;
-		padding: 0;
-	}
+    #footer .icons a:hover {
+        transform: translateY(-3px); /* Move up slightly on hover */
+    }
 
-		#footer .copyright li {
-			border-left: solid 1px rgba(255, 255, 255, 0.25);
-			display: inline-block;
-			line-height: 1em;
-			margin-left: 0.75em;
-			padding-left: 0.75em;
-		}
+#footer .copyright {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.8em;
+    list-style: none;
+    margin: 1em 0 0 0;
+    padding: 0;
+}
 
-			#footer .copyright li:first-child {
-				border-left: 0;
-				margin-left: 0;
-				padding-left: 0;
-			}
+    #footer .copyright li {
+        border-left: solid 1px rgba(255, 255, 255, 0.25);
+        display: inline-block; /* Apply transform to inline-block elements */
+        line-height: 1em;
+        margin-left: 0.75em;
+        padding-left: 0.75em;
+        transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    }
 
-			#footer .copyright li a {
-				color: inherit;
-			}
+        #footer .copyright li:hover {
+            transform: translateY(-3px); /* Move up slightly on hover */
+        }
+
+        #footer .copyright li:first-child {
+            border-left: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        #footer .copyright li a {
+            color: inherit;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        #footer .copyright li a:hover {
+            transform: translateY(-3px); /* Move up slightly on hover */
+        }
 
 /* Main */
 
@@ -3262,43 +3286,46 @@ input, select, textarea {
 	}
 	
 
-		/* Navigation Bar Styling */
-		#nav {
-			margin-left: 0px;
-			background-color: #020438; /* Dark background for the nav bar */
-			color: #ffffff; /* White text color */
-			padding: 0.5em; /* Padding around the nav items */
-			text-align: center; /* Center the nav items horizontally */
-			
-			box-sizing: border-box; /* Include padding in the width calculation */
-		}
-		
-		#nav ul {
-			list-style: none; /* Remove default list styling */
-			padding: 0;
-			margin: 0 auto; /* Center the list in the nav */
-			display: block; /* Take full width to center content */
-			text-align: center; /* Center the list items */
-		}
-		
-		#nav ul li {
-			display: inline-block; /* Display list items inline but respecting padding and margins */
-			margin-right: 20px; /* Space between nav items */
-			margin-left: 20px; /* Space between nav items */
-		}
-		
-		#nav ul li a {
-			color: #ffffff; /* White text color for links */
-			text-decoration: none; /* Remove underline from links */
-			font-weight: bold; /* Make the nav items bold */
-		}
-		
-		#nav ul li a:hover {
-			color: #f0f0f0; /* Lighter grey on hover for feedback */
-		}
-		#nav a {
-			text-decoration: none;
-		}
+	/* Navigation Bar Styling */
+	#nav {
+		margin-left: 0px;
+		background-color: #f8f8f8; /* Updated dark background for the nav bar */
+		color: #ffffff; /* White text color */
+		padding: 0.5em; /* Padding around the nav items */
+		text-align: center; /* Center the nav items horizontally */
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+		box-sizing: border-box; /* Include padding in the width calculation */
+	}
+
+	#nav ul {
+		list-style: none; /* Remove default list styling */
+		padding: 0;
+		margin: 0 auto; /* Center the list in the nav */
+		display: block; /* Take full width to center content */
+		text-align: center; /* Center the list items */
+	}
+
+	#nav ul li {
+		display: inline-block; /* Display list items inline but respecting padding and margins */
+		margin: 0 20px; /* Space between nav items */
+		transition: transform 0.3s ease; /* Smooth transition for hover effect */
+	}
+
+	#nav ul li a {
+		color: #5a5d9d; /* Adjusted text color for better contrast */
+		text-decoration: none; /* Remove underline from links */
+		font-weight: bold; /* Make the nav items bold */
+		transition: color 0.3s ease; /* Smooth color transition on hover */
+	}
+
+	#nav ul li a:hover {
+		color: #f0f0f0; /* Lighter grey on hover for feedback */
+		text-decoration: none; /* Ensure no underline on hover */
+	}
+
+	#nav ul li:hover {
+		transform: translateY(-3px); /* Slight lift effect on hover */
+	}
 		
 		
 .work-item a:hover {
@@ -3352,70 +3379,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Popup overlay */
-.popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 10;
-}
-
-/* 
-.popup-content {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 500px;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    z-index: 11;
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-
-.popup-overlay.active,
-.popup-content.active {
-    display: block;
-    /* other necessary styles for visibility 
-}
-.popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.popup-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    width: 80%;
-    max-width: 500px;
-}
-
-#closeExperiencePopup {
-    display: block;
-    margin-top: 20px;
-}
-other necessary styles for visibility */
-
 .popup-overlay {
     display: none; /* Hide the popup by default */
     position: fixed;
@@ -3444,10 +3407,9 @@ other necessary styles for visibility */
 
 @media (min-width: 768px) {
     .popup-content {
-        max-width: 100%; /* Use a smaller max-width for larger screens */
+        max-width: 50%; /* Use a smaller max-width for larger screens */
     }
 }
-
 
 .certification-link a {
     color: inherit; /* Or specify the color you want */
@@ -3459,7 +3421,6 @@ a, a:hover, a:active, a:visited {
 a {
     text-decoration: none !important;
 }
-
 
 /* Card Style for Each Work Item */
 .work-item-card {
