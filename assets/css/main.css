@@ -2157,7 +2157,7 @@ input, select, textarea {
 
 			.avatar img {
 				position: relative;
-				margin-left: -130px;
+				margin-left: -60px;
 				top: -30px;
 				float: left;
 				width: 500px; /* Or any other size */
@@ -2633,7 +2633,7 @@ input, select, textarea {
 		left: 0;
 		padding: 8em 4em;
 		position: fixed;
-		text-align: right;
+		text-align: center;
 		top: 0;
 		width: 35%;
 	}
