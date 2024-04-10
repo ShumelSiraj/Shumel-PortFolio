@@ -3418,21 +3418,6 @@ other necessary styles for visibility */
 .popup-overlay {
     display: none; /* Hidden by default */
     position: fixed;
-    /* other properties */
-}
-
-.popup-content {
-	background-color:white;
-    display: block; /* Ensure this is visible when the popup is active */
-    /* other properties */
-}
-.popup-overlay {
-    z-index: 1000; /* Adjust the value based on your site's specific needs */
-    /* other properties */
-}
-.popup-overlay {
-    display: none;
-    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -3446,10 +3431,20 @@ other necessary styles for visibility */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 80%; /* Responsive width */
+    max-width: 500px; /* Maximum width */
     padding: 20px;
     background: white;
     z-index: 1001;
+    overflow-y: auto; /* Allows scrolling */
+    max-height: 90vh; /* Limits the height to 90% of the viewport height */
 }
+.popup-overlay {
+    z-index: 1000; /* Adjust the value based on your site's specific needs */
+    /* other properties */
+}
+
+
 .certification-link a {
     color: inherit; /* Or specify the color you want */
     text-decoration: none;
@@ -3460,10 +3455,11 @@ a, a:hover, a:active, a:visited {
 a {
     text-decoration: none !important;
 }
-@media only screen and (max-width: 768px) {
-    #header {
-        background-size: auto, 100%; /* Adjust background size for smaller screens */
-        padding: 4em 1em; /* Adjust padding for smaller screens */
+
+@media (max-width: 600px) {
+    .popup-content {
+        width: 90%; /* Slightly larger width on small devices */
+        padding: 15px; /* Adjust padding on smaller screens */
     }
 }
 
