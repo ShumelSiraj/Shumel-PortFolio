@@ -3454,7 +3454,7 @@ other necessary styles for visibility */
 
 @media only screen and (max-width: 480px) {
     .popup-content {
-        padding: 10px; /* Reduce padding on very small screens */
+        padding: 20px; /* Reduce padding on very small screens */
     }
 }
 
