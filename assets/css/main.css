@@ -3417,45 +3417,35 @@ html {
 other necessary styles for visibility */
 
 .popup-overlay {
-    display: none;
+    display: none; /* Hide the popup by default */
     position: fixed;
     left: 0;
     top: 0;
-    width: 100vw; /* viewport width for full screen coverage */
-    height: 100vh; /* viewport height for full screen coverage */
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    overflow-y: auto; /* Allows scrolling if the popup content is taller than the screen */
+    z-index: 1000; /* Ensure the overlay is on top of other content */
 }
 
 .popup-content {
+    display: block; /* Show the popup content when active */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 90%; /* Prevents the popup from being too wide on larger screens */
-    max-height: 90vh; /* Prevents the popup from being too tall and ensures it's contained within the viewport */
-    overflow-y: auto; /* Allows scrolling within the popup if content is too tall */
+    width: auto; /* Adjust width to content size */
+    max-width: 90%; /* Limit the maximum width to ensure padding from screen edges */
+    max-height: 90vh; /* Limit the maximum height to ensure padding from screen edges */
+    overflow-y: auto; /* Allow scrolling for overflow content */
     padding: 20px;
-    background: white;
-    z-index: 1001;
+    background-color: white;
+    z-index: 1001; /* Ensure the content is on top of the overlay */
 }
 
-/* Media queries for different screen sizes */
-@media only screen and (max-width: 768px) {
+@media (min-width: 768px) {
     .popup-content {
-        max-width: 95%; /* Allows the popup to take more width on smaller screens */
-    }
-    #header {
-        background-size: auto, 100%; /* Adjust background size */
-        padding: 4em 1em; /* Adjust padding */
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .popup-content {
-        padding: 20px; /* Reduce padding on very small screens */
-    }
+        max-width: 50%; /* Use a smaller max-width for larger screens */
+    }
 }
 
 
