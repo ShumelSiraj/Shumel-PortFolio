@@ -3447,3 +3447,24 @@ a {
         padding: 4em 1em; /* Adjust padding for smaller screens */
     }
 }
+
+/* Card Style for Each Work Item */
+.work-item-card {
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Spacing inside the card */
+    margin-bottom: 30px; /* Spacing between cards */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect for Cards */
+.work-item-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure that the image fits nicely */
+.work-item-card .image.fit.thumb {
+    border-radius: 5px; /* Rounded corners for images */
+    overflow: hidden; /* Ensures the border radius affects the child image */
+}
