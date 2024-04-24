@@ -294,7 +294,7 @@ function Data_Intern() {
     </li>
     <li>Optimized data processing pipelines using R and Python for improved accuracy and efficiency.
     </li>
-    <li>OLed data analysis initiatives that provided strategic insights for business optimization and digital product enhancement.
+    <li>Led data analysis initiatives that provided strategic insights for business optimization and digital product enhancement.
     </li>
     <li>Led cross-functional teams in data governance and product development, enhancing operational efficiency and pioneering data privacy initiatives.
     </li>
