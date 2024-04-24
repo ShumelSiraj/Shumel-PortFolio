@@ -284,6 +284,29 @@ function administrative() {
     document.getElementById('experienceDetails').innerHTML = content;
     document.getElementById('experiencePopup').style.display = 'block';
 }
+function Data_Intern() {
+    var title = 'Data Management and Analysis Intern';
+    var content = `
+    <ul>
+    <li>Designed and implemented a secure, consent-based data-sharing framework and enhanced privacy and governance in the financial and healthcare sectors.
+    </li>
+    <li>Facilitated financial inclusion by making a substantial contribution to the creation of India's Data Empowerment and Protection Architecture (DEPA).
+    </li>
+    <li>Optimized data processing pipelines using R and Python for improved accuracy and efficiency.
+    </li>
+    <li>OLed data analysis initiatives that provided strategic insights for business optimization and digital product enhancement.
+    </li>
+    <li>Led cross-functional teams in data governance and product development, enhancing operational efficiency and pioneering data privacy initiatives.
+    </li>
+	<li>Recognized for effective leadership and scientific achievements.
+	</li>
+    </ul>
+` ;
+    
+    document.getElementById('experienceTitle').innerHTML = title;
+    document.getElementById('experienceDetails').innerHTML = content;
+    document.getElementById('experiencePopup').style.display = 'block';
+}
 function intern() {
     var title = ' Finance Intern';
     var content = `
